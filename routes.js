@@ -1,5 +1,5 @@
 const router = require("express").Router();
-const Control = require("./controllers/userControl");
+const Control = require("./controllers/employeeControl");
 
 
 

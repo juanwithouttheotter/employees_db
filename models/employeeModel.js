@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 
 const { Schema } = mongoose;
 
-const UserSchema = new Schema({
+const EmployeeSchema = new Schema({
   name: {
     first: {
       type: String,
@@ -26,5 +26,5 @@ const UserSchema = new Schema({
   },
 });
 
-const User = mongoose.model("User", UserSchema);
-module.exports = User;
+const Employee = mongoose.model("Employee", EmployeeSchema);
+module.exports = Employee;
