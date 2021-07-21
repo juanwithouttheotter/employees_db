@@ -8,12 +8,12 @@ exports.create = async ({ body }, res) => {
         .status(201)
         .json({
           success: true,
-          id: Employee._id,
+          id: NewEmployee._id,
           message: 'Employee created!',
         })
         .end()
     })
-    .catch(err => console.log(err.message));
+    .catch(err => console.log(err));
 }
 
 exports.getAll = async (req, res) => {
@@ -39,7 +39,7 @@ exports.getAll = async (req, res) => {
         .end()
     }
   })
-    .catch(err => console.log(err.message));
+    .catch(err => console.log(err));
 }
 
 exports.update = async ({ params, body }, res) => {
@@ -67,7 +67,7 @@ exports.update = async ({ params, body }, res) => {
           .end()
       }
     })
-    .catch(err => console.log(err.message));
+    .catch(err => console.log(err));
 }
 
 exports.delete = async ({ params }, res) => {
@@ -100,5 +100,5 @@ exports.delete = async ({ params }, res) => {
         })
         .end()
     })
-    .catch(err => console.log(err.message));
+    .catch(err => console.log(err));
 }
