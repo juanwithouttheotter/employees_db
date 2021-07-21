@@ -3,7 +3,7 @@ const mongoose = require("mongoose");
 const cors = require('cors');
 const routes = require('./routes');
 
-const PORT = process.env.PORT || 3001;
+const port = process.env.PORT || 3001;
 const app = express();
 
 app.use(express.urlencoded({extended:true}));
@@ -17,5 +17,5 @@ mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/employees', {
     useUnifiedTopology: true
 });
 
-app.listen(PORT, () => {console.log(`App is listening to port ${PORT}`)});
+app.listen(port, () => {console.log(`App is listening to port ${port}`)});
 
